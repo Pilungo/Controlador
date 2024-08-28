@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controle de Lava Jato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <img src="logo.png" alt="Kadosh Lava Rapido" />
+            </div>
+            <div class="date">
+                <label for="data">Data:</label>
+                <input type="date" id="data">
+            </div>
+        </header>
+
+        <section class="info-cliente">
+            <h2>Informações do Cliente</h2>
+            <label for="nome">Nome:</label>
+            <input type="text" id="nome">
+            
+            <label for="fone">Fone:</label>
+            <input type="tel" id="fone">
+
+            <label for="placa">Placa:</label>
+            <input type="text" id="placa">
+            
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca">
+
+            <label for="local">Local:</label>
+            <input type="text" id="local">
+        </section>
+
+        <section class="servicos">
+            <h2>Serviços</h2>
+            <div>
+                <input type="checkbox" id="lavagemSimples">
+                <label for="lavagemSimples">Lavagem Simples - R$30,00</label>
+            </div>
+            <div>
+                <input type="checkbox" id="lavagemCompleta">
+                <label for="lavagemCompleta">Lavagem Completa - R$50,00</label>
+            </div>
+            <div>
+                <input type="checkbox" id="enceramento">
+                <label for="enceramento">Enceramento de Pintura - R$70,00</label>
+            </div>
+            <div>
+                <input type="checkbox" id="limpezaMotor">
+                <label for="limpezaMotor">Limpeza Técnica de Motor - R$100,00</label>
+            </div>
+            <div>
+                <input type="checkbox" id="higienizacaoAr">
+                <label for="higienizacaoAr">Higienização de Ar Condicionado - R$60,00</label>
+            </div>
+            <div>
+                <input type="checkbox" id="cristalizacaoVidros">
+                <label for="cristalizacaoVidros">Cristalização de Vidros - R$80,00</label>
+            </div>
+            <div>
+                <input type="checkbox" id="higienizacaoBancos">
+                <label for="higienizacaoBancos">Higienização de Bancos - R$90,00</label>
+            </div>
+            <div>
+                <input type="checkbox" id="higienizacaoInteriores">
+                <label for="higienizacaoInteriores">Higienização de Interiores - R$110,00</label>
+            </div>
+            <div>
+                <input type="checkbox" id="higienizacaoEstofados">
+                <label for="higienizacaoEstofados">Higienização de Estofados e Colchões - R$130,00</label>
+            </div>
+        </section>
+
+        <section class="detalhes">
+            <h2>Detalhes do Serviço</h2>
+            <label for="entrada">Horário de Entrada:</label>
+            <input type="time" id="entrada">
+            
+            <label for="previsao">Previsão de Entrega:</label>
+            <input type="time" id="previsao">
+            
+            <div>
+                <input type="checkbox" id="batido">
+                <label for="batido">Carro Batido</label>
+            </div>
+            <div>
+                <input type="checkbox" id="riscado">
+                <label for="riscado">Carro Riscado</label>
+            </div>
+            <div>
+                <input type="checkbox" id="quebrado">
+                <label for="quebrado">Carro Quebrado</label>
+            </div>
+        </section>
+
+        <section class="total">
+            <h2>Total</h2>
+            <label for="total">Valor Total:</label>
+            <input type="text" id="total" readonly>
+        </section>
+
+        <button onclick="calcularTotal()">Calcular Total</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
