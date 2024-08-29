@@ -3,108 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Controle de Lava Jato</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Administração de Lava Jato</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <header>
-            <div class="logo">
-                <img src="logo.png" alt="Kadosh Lava Rapido" />
-            </div>
-            <div class="date">
-                <label for="data">Data:</label>
-                <input type="date" id="data">
-            </div>
-        </header>
+        <h1>Lava Jato - Administração</h1>
+        <div class="menu">
+            <button onclick="showMenu('servicos')">Serviços</button>
+            <button onclick="showMenu('historico')">Histórico</button>
+        </div>
 
-        <section class="info-cliente">
-            <h2>Informações do Cliente</h2>
-            <label for="nome">Nome:</label>
-            <input type="text" id="nome">
-            
-            <label for="fone">Fone:</label>
-            <input type="tel" id="fone">
+        <div id="servicos" class="content">
+            <h2>Cadastro de Serviços</h2>
+            <form id="serviceForm">
+                <h3>Informações do Cliente</h3>
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" required>
 
-            <label for="placa">Placa:</label>
-            <input type="text" id="placa">
-            
-            <label for="marca">Marca:</label>
-            <input type="text" id="marca">
+                <label for="contato">Contato:</label>
+                <input type="text" id="contato" required>
 
-            <label for="local">Local:</label>
-            <input type="text" id="local">
-        </section>
+                <label for="placa">Placa:</label>
+                <input type="text" id="placa" required>
 
-        <section class="servicos">
-            <h2>Serviços</h2>
-            <div>
-                <input type="checkbox" id="lavagemSimples">
-                <label for="lavagemSimples">Lavagem Simples - R$30,00</label>
-            </div>
-            <div>
-                <input type="checkbox" id="lavagemCompleta">
-                <label for="lavagemCompleta">Lavagem Completa - R$50,00</label>
-            </div>
-            <div>
-                <input type="checkbox" id="enceramento">
-                <label for="enceramento">Enceramento de Pintura - R$70,00</label>
-            </div>
-            <div>
-                <input type="checkbox" id="limpezaMotor">
-                <label for="limpezaMotor">Limpeza Técnica de Motor - R$100,00</label>
-            </div>
-            <div>
-                <input type="checkbox" id="higienizacaoAr">
-                <label for="higienizacaoAr">Higienização de Ar Condicionado - R$60,00</label>
-            </div>
-            <div>
-                <input type="checkbox" id="cristalizacaoVidros">
-                <label for="cristalizacaoVidros">Cristalização de Vidros - R$80,00</label>
-            </div>
-            <div>
-                <input type="checkbox" id="higienizacaoBancos">
-                <label for="higienizacaoBancos">Higienização de Bancos - R$90,00</label>
-            </div>
-            <div>
-                <input type="checkbox" id="higienizacaoInteriores">
-                <label for="higienizacaoInteriores">Higienização de Interiores - R$110,00</label>
-            </div>
-            <div>
-                <input type="checkbox" id="higienizacaoEstofados">
-                <label for="higienizacaoEstofados">Higienização de Estofados e Colchões - R$130,00</label>
-            </div>
-        </section>
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" required>
 
-        <section class="detalhes">
-            <h2>Detalhes do Serviço</h2>
-            <label for="entrada">Horário de Entrada:</label>
-            <input type="time" id="entrada">
-            
-            <label for="previsao">Previsão de Entrega:</label>
-            <input type="time" id="previsao">
-            
-            <div>
-                <input type="checkbox" id="batido">
-                <label for="batido">Carro Batido</label>
-            </div>
-            <div>
-                <input type="checkbox" id="riscado">
-                <label for="riscado">Carro Riscado</label>
-            </div>
-            <div>
-                <input type="checkbox" id="quebrado">
-                <label for="quebrado">Carro Quebrado</label>
-            </div>
-        </section>
+                <label for="empresa">Empresa:</label>
+                <input type="text" id="empresa">
 
-        <section class="total">
-            <h2>Total</h2>
-            <label for="total">Valor Total:</label>
-            <input type="text" id="total" readonly>
-        </section>
+                <h3>Serviços</h3>
+                <label><input type="checkbox" id="lavagemSimples" value="Lavagem Simples - R$50,00"> Lavagem Simples - R$50,00</label><br>
+                <label><input type="checkbox" id="lavagemCompleta" value="Lavagem Completa - R$60,00"> Lavagem Completa - R$60,00</label><br>
+                <label><input type="checkbox" id="enceramentoPintura" value="Enceramento de Pintura - R$70,00"> Enceramento de Pintura - R$70,00</label><br>
+                <label><input type="checkbox" id="limpezaMotor" value="Limpeza Técnica de Motor - R$100,00"> Limpeza Técnica de Motor - R$100,00</label><br>
+                <label><input type="checkbox" id="cristalizacaoVidros" value="Cristalização de Vidros - R$80,00"> Cristalização de Vidros - R$80,00</label><br>
+                <label><input type="checkbox" id="higienizacaoBancos" value="Higienização de Bancos - R$90,00"> Higienização de Bancos - R$90,00</label><br>
+                <label><input type="checkbox" id="higienizacaoInteriores" value="Higienização de Interiores - R$110,00"> Higienização de Interiores - R$110,00</label><br>
+                <label><input type="checkbox" id="higienizacaoEstofados" value="Higienização de Estofados e Colchões - R$130,00"> Higienização de Estofados e Colchões - R$130,00</label><br>
 
-        <button onclick="calcularTotal()">Calcular Total</button>
+                <h3>Detalhes do Serviço</h3>
+                <label for="horarioEntrada">Horário de Entrada:</label>
+                <input type="time" id="horarioEntrada" required>
+
+                <label for="previsaoEntrega">Previsão de Entrega:</label>
+                <input type="time" id="previsaoEntrega" required>
+
+                <h3>Condições do Carro</h3>
+                <label><input type="checkbox" id="carroBatido"> Carro Batido</label><br>
+                <label><input type="checkbox" id="carroRiscado"> Carro Riscado</label><br>
+                <label><input type="checkbox" id="carroQuebrado"> Carro Quebrado</label><br>
+
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+
+        <div id="historico" class="content" style="display:none;">
+            <h2>Histórico de Serviços</h2>
+            <div id="historicoContent"></div>
+        </div>
     </div>
 
     <script src="script.js"></script>
