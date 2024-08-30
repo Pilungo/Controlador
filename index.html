@@ -12,6 +12,7 @@
         <div class="menu">
             <button onclick="showMenu('servicos')">Serviços</button>
             <button onclick="showMenu('historico')">Histórico</button>
+            <button onclick="showMenu('faturamento')">Faturamento</button>
         </div>
 
         <div id="servicos" class="content">
@@ -57,11 +58,22 @@
 
                 <button type="submit">Salvar</button>
             </form>
+            <div id="feedback" class="feedback"></div>
         </div>
 
         <div id="historico" class="content" style="display:none;">
             <h2>Histórico de Serviços</h2>
+            <input type="text" id="searchInput" placeholder="Buscar por nome..." oninput="filterHistorico()">
             <div id="historicoContent"></div>
+        </div>
+
+        <div id="faturamento" class="content" style="display:none;">
+            <h2>Faturamento</h2>
+            <div id="faturamentoContent">
+                <p><strong>Faturamento do Dia:</strong> R$<span id="faturamentoDia">0.00</span></p>
+                <p><strong>Faturamento do Mês:</strong> R$<span id="faturamentoMes">0.00</span></p>
+                <p><strong>Faturamento do Ano:</strong> R$<span id="faturamentoAno">0.00</span></p>
+            </div>
         </div>
     </div>
 
